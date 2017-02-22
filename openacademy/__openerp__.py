@@ -21,14 +21,10 @@
     'depends': ['purchase'],
 
     # always loaded
-    'data': [
-        # 'security/ir.model.access.csv',
-        'templates.xml',
-    ],
+    'data': [],
+
     # only loaded in demonstration mode
-    'demo': [
-        'demo.xml',
-    ] ,
+    'demo': [],
 
     'installable': True,
 }
