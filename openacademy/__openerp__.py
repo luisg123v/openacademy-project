@@ -24,7 +24,7 @@
     'data': [],
 
     # only loaded in demonstration mode
-    'demo': [],
+    'demo': ['demo/openacademy_course_demo.xml',],
 
     'installable': True,
 }
