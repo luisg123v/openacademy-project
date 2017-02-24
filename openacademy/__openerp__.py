@@ -21,7 +21,9 @@
     'depends': ['purchase'],
 
     # always loaded
-    'data': ['views/openacademy_course_view.xml'],
+    'data': [
+        'views/openacademy_course_view.xml',
+        'views/openacademy_session_view.xml',],
 
     # only loaded in demonstration mode
     'demo': ['demo/openacademy_course_demo.xml',],

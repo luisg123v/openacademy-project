@@ -4,6 +4,7 @@ from openerp import models, fields, api
 
 """ This is our first Odoo module"""
 
+
 class Course(models.Model):
     """
     This class will be used to test
