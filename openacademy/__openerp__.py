@@ -18,15 +18,22 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['purchase'],
+    'depends': [
+        'base',
+        'purchase',
+    ],
 
     # always loaded
     'data': [
         'views/openacademy_course_view.xml',
-        'views/openacademy_session_view.xml',],
+        'views/openacademy_session_view.xml',
+        'views/partner.xml',
+    ],
 
     # only loaded in demonstration mode
-    'demo': ['demo/openacademy_course_demo.xml',],
+    'demo': [
+        'demo/openacademy_course_demo.xml',
+    ],
 
     'installable': True,
 }
