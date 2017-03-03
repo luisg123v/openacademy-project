@@ -12,9 +12,10 @@
                     <sheet>
                         <group>
                             <group string="General">
-                                <field name="course_id"/>
                                 <field name="name"/>
+                                <field name="course_id"/>
                                 <field name="instructor_id"/>
+                                <field name="active"/>
                             </group>
                             <group string="Schedule">
                                 <field name="start_date"/>
