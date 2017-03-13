@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-13 14:28+0000\n"
-"PO-Revision-Date: 2017-03-13 14:28+0000\n"
+"POT-Creation-Date: 2017-03-13 18:33+0000\n"
+"PO-Revision-Date: 2017-03-13 18:33+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,6 +20,12 @@ msgstr ""
 msgid "<p class=\"oe_view_nocontent_create\">Create the first course\n"
 "                </p>\n"
 "            "
+msgstr ""
+
+#. module: openacademy
+#: code:addons/openacademy/models/openacademy_session.py:126
+#, python-format
+msgid "A session's instructor can't be an attendee"
 msgstr ""
 
 #. module: openacademy
@@ -85,6 +91,24 @@ msgstr ""
 #: model:ir.actions.act_window,name:openacademy.contact_list_action
 #: model:ir.ui.menu,name:openacademy.contact_menu
 msgid "Contacts"
+msgstr ""
+
+#. module: openacademy
+#: code:addons/openacademy/models/openacademy_course.py:30
+#, python-format
+msgid "Copy of {}"
+msgstr ""
+
+#. module: openacademy
+#: code:addons/openacademy/models/openacademy_course.py:32
+#, python-format
+msgid "Copy of {} ({})"
+msgstr ""
+
+#. module: openacademy
+#: code:addons/openacademy/models/openacademy_course.py:28
+#, python-format
+msgid "Copy of {}%"
 msgstr ""
 
 #. module: openacademy
@@ -180,6 +204,18 @@ msgstr ""
 #: field:openacademy.session,id:0
 #: field:openacademy.wizard,id:0
 msgid "ID"
+msgstr ""
+
+#. module: openacademy
+#: code:addons/openacademy/models/openacademy_session.py:72
+#, python-format
+msgid "Incorrect 'seats' value"
+msgstr ""
+
+#. module: openacademy
+#: code:addons/openacademy/models/openacademy_session.py:80
+#, python-format
+msgid "Increase seats or remove excess attendees"
 msgstr ""
 
 #. module: openacademy
@@ -362,6 +398,12 @@ msgid "The course title must be unique"
 msgstr ""
 
 #. module: openacademy
+#: code:addons/openacademy/models/openacademy_session.py:73
+#, python-format
+msgid "The number of available seats may not be negative"
+msgstr ""
+
+#. module: openacademy
 #: sql_constraint:openacademy.course:0
 msgid "The title of the course should not be the description"
 msgstr ""
@@ -369,6 +411,12 @@ msgstr ""
 #. module: openacademy
 #: field:openacademy.course,name:0
 msgid "Title"
+msgstr ""
+
+#. module: openacademy
+#: code:addons/openacademy/models/openacademy_session.py:79
+#, python-format
+msgid "Too many attendees"
 msgstr ""
 
 #. module: openacademy

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-13 14:20+0000\n"
-"PO-Revision-Date: 2017-03-13 14:20+0000\n"
+"POT-Creation-Date: 2017-03-13 18:35+0000\n"
+"PO-Revision-Date: 2017-03-13 18:35+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -23,6 +23,12 @@ msgid "<p class=\"oe_view_nocontent_create\">Create the first course\n"
 msgstr "<p class=\"oe_view_nocontent_create\">Crea el primer curso\n"
 "                </p>\n"
 "            "
+
+#. module: openacademy
+#: code:addons/openacademy/models/openacademy_session.py:126
+#, python-format
+msgid "A session's instructor can't be an attendee"
+msgstr "El instructor de una sesión no puede ser un asistente"
 
 #. module: openacademy
 #: field:openacademy.session,active:0
@@ -88,6 +94,24 @@ msgstr "Contact Tags"
 #: model:ir.ui.menu,name:openacademy.contact_menu
 msgid "Contacts"
 msgstr "Contacts"
+
+#. module: openacademy
+#: code:addons/openacademy/models/openacademy_course.py:30
+#, python-format
+msgid "Copy of {}"
+msgstr "Copia de {}"
+
+#. module: openacademy
+#: code:addons/openacademy/models/openacademy_course.py:32
+#, python-format
+msgid "Copy of {} ({})"
+msgstr "Copia de {} ({})"
+
+#. module: openacademy
+#: code:addons/openacademy/models/openacademy_course.py:28
+#, python-format
+msgid "Copy of {}%"
+msgstr "Copia de {}%"
 
 #. module: openacademy
 #: field:openacademy.session,course_id:0
@@ -183,6 +207,18 @@ msgstr "Group By"
 #: field:openacademy.wizard,id:0
 msgid "ID"
 msgstr "ID"
+
+#. module: openacademy
+#: code:addons/openacademy/models/openacademy_session.py:72
+#, python-format
+msgid "Incorrect 'seats' value"
+msgstr "Número de cupos incorrecto"
+
+#. module: openacademy
+#: code:addons/openacademy/models/openacademy_session.py:80
+#, python-format
+msgid "Increase seats or remove excess attendees"
+msgstr "Incremente el número de cupos o elimine el excedente de asistentes"
 
 #. module: openacademy
 #: field:openacademy.session,instructor_id:0
@@ -326,12 +362,12 @@ msgstr "Set session to Draft"
 #. module: openacademy
 #: field:openacademy.session,start_date:0
 msgid "Start date"
-msgstr "Start date"
+msgstr "Fecha de inicio"
 
 #. module: openacademy
 #: view:openacademy.session:openacademy.view_openacad_session_kanban
 msgid "Start date:"
-msgstr "Start date:"
+msgstr "Fecha de inicio:"
 
 #. module: openacademy
 #: field:openacademy.session,state:0
@@ -364,14 +400,26 @@ msgid "The course title must be unique"
 msgstr "The course title must be unique"
 
 #. module: openacademy
+#: code:addons/openacademy/models/openacademy_session.py:73
+#, python-format
+msgid "The number of available seats may not be negative"
+msgstr "El número de cupos disponibles no puede ser negativo"
+
+#. module: openacademy
 #: sql_constraint:openacademy.course:0
 msgid "The title of the course should not be the description"
-msgstr "The title of the course should not be the description"
+msgstr "El título del curso no debería ser la descripción"
 
 #. module: openacademy
 #: field:openacademy.course,name:0
 msgid "Title"
 msgstr "Título"
+
+#. module: openacademy
+#: code:addons/openacademy/models/openacademy_session.py:79
+#, python-format
+msgid "Too many attendees"
+msgstr "Demasiados asistentes"
 
 #. module: openacademy
 #: view:openacademy.session:openacademy.view_openacad_session_kanban
