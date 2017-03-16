@@ -23,7 +23,11 @@ for session in sessions:
     print "Session %s (%s seats)" % (session['name'], session['seats'])
 
 # 3.create a new session
-session_id = call('openacademy.session', 'create', {
-    'name' : 'My session',
-    'course_id' : 2,
-})
+duplicates = call('openacademy.session','search_count', [('name', '=', 'My session')])
+if not duplicates:
+    session_id = call('openacademy.session', 'create', {
+        'name' : 'My session',
+        'course_id' : 2,
+    })
+else:
+    print "The session 'My session' already exists, not created."
