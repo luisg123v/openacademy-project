@@ -25,9 +25,10 @@ for session in sessions:
 # 3.create a new session
 duplicates = call('openacademy.session','search_count', [('name', '=', 'My session')])
 if not duplicates:
+    first_course = call('openacademy.course','search', [])[0]
     session_id = call('openacademy.session', 'create', {
         'name' : 'My session',
-        'course_id' : 2,
+        'course_id' : first_course,
     })
 else:
     print "The session 'My session' already exists, not created."
