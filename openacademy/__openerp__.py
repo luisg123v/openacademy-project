@@ -21,6 +21,7 @@
     'depends': [
         'base',
         'purchase',
+        'board',
     ],
 
     # always loaded
@@ -31,6 +32,7 @@
         'views/openacademy_session_view.xml',
         'views/openacademy_wizard_view.xml',
         'views/partner.xml',
+        'views/session_board.xml',
         'reports/openacademy_session_report.xml',
         'workflows/openacademy_session.xml',
     ],
