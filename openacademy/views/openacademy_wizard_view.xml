@@ -29,5 +29,11 @@
                     target="new"
                     key2="client_action_multi"/>
 
+        <menuitem id="session_launch_wizard"
+                  name="Add Attendees"
+                  groups="openacademy.openacademy_group_manager"
+                  parent="openacademy_menu"
+                  action="openacademy.launch_session_wizard"/>
+
     </data>
 </openerp>
