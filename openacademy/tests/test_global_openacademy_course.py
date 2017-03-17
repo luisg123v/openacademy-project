@@ -5,11 +5,12 @@ from psycopg2 import IntegrityError
 from openerp.tools import mute_logger
 
 class GlobalTestOpenAcademyCourse(TransactionCase):
-    """ Global test to openacademy course model.
-    Test create course and trigger contraints."""
+    """
+    Global test to openacademy course model.
+    Tests create courses and trigger constraints.
+    """
 
     def setUp(self):
-        # Define global variables to test methods
         super(GlobalTestOpenAcademyCourse, self).setUp()
         self.course = self.env['openacademy.course']
 
@@ -35,3 +36,27 @@ class GlobalTestOpenAcademyCourse(TransactionCase):
                 ' check constraint "openacademy_course_name_description_check"'
                 ):
             self.create_course('test', 'test', None)
+
+    @mute_logger('openerp.sql_db')
+    def test_20_two_courses_same_name(self):
+        """
+        This test creates two courses with the same name
+        to test unique constraint
+        """
+        self.create_course("test name", "test description", None)
+        with self.assertRaisesRegexp(
+                IntegrityError,
+                'duplicate key value violates unique constraint '
+                '"openacademy_course_name_unique"'
+                ):
+            self.create_course("test name", "test description2", None)
+
+    def test_30_duplicate_course(self):
+        """
+        This test creates a course and makes two copies
+        to test if it works despite the unique constraint
+        """
+        import pdb; pdb.set_trace()
+        new_course = self.create_course("test", "Test description", None)
+        new_course.copy()
+        new_course.copy()
