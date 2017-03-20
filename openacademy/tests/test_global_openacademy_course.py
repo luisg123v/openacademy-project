@@ -56,7 +56,6 @@ class GlobalTestOpenAcademyCourse(TransactionCase):
         This test creates a course and makes two copies
         to test if it works despite the unique constraint
         """
-        import pdb; pdb.set_trace()
         new_course = self.create_course("test", "Test description", None)
         new_course.copy()
         new_course.copy()
