@@ -1,4 +1,5 @@
-# A symbolic link in ~/.bash_aliases is pointing to this file
+# A symbolic link in ~/.bash_aliases is pointing out to this file
+# So this one is used and it's also tracked by git
 
 # Aliases to facilitate dealing with odoo parameters
 alias odoo='~/odoo/odoo.py -d odoo_curso --addons-path=~/my-modules,~/odoo/addons'
