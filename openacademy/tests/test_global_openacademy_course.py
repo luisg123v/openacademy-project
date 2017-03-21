@@ -4,6 +4,7 @@ from openerp.tests.common import TransactionCase
 from psycopg2 import IntegrityError
 from openerp.tools import mute_logger
 
+
 class GlobalTestOpenAcademyCourse(TransactionCase):
     """
     Global test to openacademy course model.
@@ -27,8 +28,8 @@ class GlobalTestOpenAcademyCourse(TransactionCase):
     @mute_logger('openerp.sql_db')
     def test_10_same_name_description(self):
         """
-        This test creates a course using the same value for name and description
-        To raise constraint of name different of description.
+        This test creates a course using the same value for name and
+        description to raise constraint of name different of description.
         """
         with self.assertRaisesRegexp(
                 IntegrityError,
