@@ -42,12 +42,11 @@ class GlobalTestOpenAcademySession(TransactionCase):
         if they work correctly
         """
         session_test = self.session.create({
-                'name': 'Session test 1',
-                'seats': 2,
-                'instructor_id': self.partner_vauxoo.id,
-                'attendee_ids': [(6, 0, [self.partner_attendee.id])],
-                'course_id': self.course.id,
-            })
+            'name': 'Session test 1',
+            'seats': 2,
+            'instructor_id': self.partner_vauxoo.id,
+            'attendee_ids': [(6, 0, [self.partner_attendee.id])],
+            'course_id': self.course.id, })
         # Check initial state
         self.assertEqual(session_test.state,
                          'draft',
